@@ -1,0 +1,20 @@
+<?php
+    $q = "select * from service where servicename='dcet'";
+    $r = mysqli_query($db,$q);
+    $i=1;
+    while($d = mysqli_fetch_assoc($r)){
+        $file = $d['file'];
+        echo "<div class='container'>";
+        echo "<div class='card' style='width: 18rem;padding:10px;float:left;margin-left:20px;margin-bottom:15px;line-height:30px'>";
+        echo "<div class='card-body'>";
+        echo "<h5 class='card-title'>DCET</h5>";
+        echo "<p class='card-text'>Branch : ".$d['branch']."</p>";
+        echo "<p class='card-text'>Syllabus : ".$d['syllabus']."</p>";
+        echo "<p class='card-text'>Semester : ".$d['semester']."</p>";
+        echo "<br>";
+        echo "<button class='btn btn-primary'><a style='color:white' href='view.php?fn=$file'>View</a></button>";
+        
+        echo "</div></div></div>";  
+        
+    }
+    ?>

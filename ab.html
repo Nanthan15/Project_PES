@@ -1,0 +1,101 @@
+<?php
+    
+    $q = "select * from studentadmin";
+    $r = mysqli_query($db,$q);
+    $i=1;
+    while($d = mysqli_fetch_assoc($r)){
+
+        echo "<div class='container mt-5'>
+    
+        <div class='row d-flex justify-content-center'>
+            
+            <div class='col-md-7'>
+                
+                <div class='card p-3 py-4'>
+                    
+                    <div class='text-center'>
+                        <img src='https://i.imgur.com/bDLhJiP.jpg' width='100' class='rounded-circle'>
+                    </div>
+                    
+                    <div class='text-center mt-3'>
+                        <span class='bg-secondary p-1 px-4 rounded text-white'>Pro</span>
+                        <h5 class='mt-2 mb-0'>Alexender Schidmt</h5>
+                        <span>UI/UX Designer</span>
+                        
+                        <div class='px-4 mt-1'>
+                            
+                        
+                        </div>
+                        
+                        
+                        
+                        <div class='buttons'>
+                            
+                            <button class='btn btn-outline-primary px-4'>Message</button>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                   
+                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>";
+
+
+
+
+
+        
+        
+        echo "<div class='container'>";
+        echo "<div class='card' style='width: 18rem;padding:10px;float:left;margin-left:20px;margin-bottom:15px;line-height:30px'>";
+        echo "<center><img src='user-png-33832.png' class='card-img-top' alt='...' style='height:100px;width:50%'>";
+        echo "<div class='card-body'>";
+        $ema = $d['email'];
+        echo "<h5 class='card-title'>Student Admin</h5>";
+        echo "<p class='card-text'>Student Name : ".$d['name']."</p>";
+        echo "<p class='card-text'>Branch : ".$d['branch']."</p>";
+        echo "<p class='card-text'>Semester : ".$d['semester']."</p>";
+        echo "<p class='card-text'>Email : ".$d['email']."</p>";
+        echo "<br>";
+        if(isset($_SESSION['user'])){
+        // echo "<button class='btn btn-primary'><a style='color:white' href='chat1.php?stu=$ema'>Get in Touch</a></button>";
+        }
+        echo "</div></div></div></center>";  
+    }
+    ?>
+   
+  
+    <?php
+    
+    $q = "select * from studentadmin";
+    $r = mysqli_query($db,$q);
+    $i=1;
+    while($d = mysqli_fetch_assoc($r)){
+        
+        
+        echo "<div class='container'>";
+        echo "<div class='card' style='width: 18rem;padding:10px;float:left;margin-left:20px;margin-bottom:15px;line-height:30px'>";
+        echo "<center><img src='user-png-33832.png' class='card-img-top' alt='...' style='height:100px;width:50%'>";
+        echo "<div class='card-body'>";
+        $ema = $d['email'];
+        echo "<h5 class='card-title'>Student Admin</h5>";
+        echo "<p class='card-text'>Student Name : ".$d['name']."</p>";
+        echo "<p class='card-text'>Branch : ".$d['branch']."</p>";
+        echo "<p class='card-text'>Semester : ".$d['semester']."</p>";
+        echo "<p class='card-text'>Email : ".$d['email']."</p>";
+        echo "<br>";
+        if(isset($_SESSION['user'])){
+        // echo "<button class='btn btn-primary'><a style='color:white' href='chat1.php?stu=$ema'>Get in Touch</a></button>";
+        }
+        echo "</div></div></div></center>";  
+    }
+    ?>
